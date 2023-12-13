@@ -1,3 +1,5 @@
+import { BsTwitterX, BsInstagram, BsFacebook } from 'react-icons/bs'
+
 import logo from '../../assests/images/logo.svg'
 import insta from '../../assests/images/gadgets/instagram.png'
 import face from '../../assests/images/gadgets/facebook.png'

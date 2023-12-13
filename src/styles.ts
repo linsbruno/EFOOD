@@ -23,7 +23,7 @@ export const GlobalCss = createGlobalStyle`
     .container {
       max-width: 1024px;
       width: 100%;
-      margin: 0 auto;
+      margin:0 auto;
       @media (max-width: 1024px) {
         padding: 0 20px;
       }

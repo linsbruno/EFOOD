@@ -5,6 +5,10 @@ class Restaurant {
   note: number
   title: string
   id: number
+  capa: string | undefined
+  descricao: string | undefined
+  avaliacao: number | undefined
+  titulo: string | undefined
 
   constructor(
     image: string,

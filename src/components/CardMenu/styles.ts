@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
 
-export const CardMenuContainer = styled.li`
+export const CardMenuContainer = styled.div`
   padding: 8px;
   display: flex;
   flex-direction: column;

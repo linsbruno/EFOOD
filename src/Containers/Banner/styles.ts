@@ -1,8 +1,7 @@
 import styled from 'styled-components'
-import img from '../../assests/images/banner.png'
+import { cores } from '../../styles'
 
 export const BannerContainer = styled.div`
-  background-image: url(${img});
   background-repeat: no-repeat;
   background-size: cover;
   height: 280px;
@@ -33,7 +32,7 @@ export const BannerContainer = styled.div`
       font-weight: 100;
       font-size: 32px;
       line-height: 38px;
-      color: #fff;
+      color: ${cores.branco};
     }
   }
 `
@@ -41,5 +40,5 @@ export const Title = styled.h2`
   font-weight: 900;
   font-size: 32px;
   line-height: 38px;
-  color: #fff;
+  color: ${cores.branco};
 `
