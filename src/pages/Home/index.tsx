@@ -1,24 +1,25 @@
-import { useEffect, useState } from 'react'
+import RestaurantList from '../../components/RestaurantList'
 
-import ListRestarant from '../../Containers/ListRestaurant'
-import Hero from '../../Containers/Hero'
-import TypeRestaurant from '../../types/restaurant'
-
-const Home = () => {
-  const [restaurants, setRestaurants] = useState<TypeRestaurant[]>([])
-
-  useEffect(() => {
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
-      .then((res) => res.json())
-      .then((data) => setRestaurants(data))
-  }, [])
-
-  return (
-    <>
-      <Hero />
-      <ListRestarant restaurants={restaurants} />
-    </>
-  )
+export type Restaurante = {
+  id: number
+  titulo: string
+  destacado: boolean
+  tipo: string
+  avaliacao: number
+  descricao: string
+  capa: string
+  cardapio: Cardapio[]
 }
+
+export type Cardapio = {
+  foto: string
+  preco: number
+  id: number
+  nome: string
+  descricao: string
+  porcao: string
+}
+
+const Home = () => <RestaurantList />
 
 export default Home
