@@ -1,21 +1,26 @@
-import React from 'react'
-import { Imagem, Title, Category } from './styles'
+import {
+  BannerBg,
+  BannerSubTitle,
+  BannerTitle,
+  BannerContainer,
+  BannerGlobal
+} from './styles'
 
 type Props = {
-  category: string
+  cover: string
   title: string
-  image: string
+  type: string
 }
 
-const Banner = ({ category, title, image }: Props) => (
-  <Imagem style={{ backgroundImage: `url(${image})` }}>
-    <div className="overlay">
-      <div className="container">
-        <Category>{category}</Category>
-        <Title>{title}</Title>
-      </div>
-    </div>
-  </Imagem>
+const Banner = ({ cover, title, type }: Props) => (
+  <BannerGlobal>
+    <BannerBg style={{ backgroundImage: `url(${cover})` }}>
+      <BannerContainer className="container">
+        <BannerSubTitle>{type}</BannerSubTitle>
+        <BannerTitle>{title}</BannerTitle>
+      </BannerContainer>
+    </BannerBg>
+  </BannerGlobal>
 )
 
 export default Banner

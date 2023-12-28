@@ -1,45 +1,48 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { colors } from '../../styles'
 
-export const Imagem = styled.div`
-  width: 100%;
-  height: 300px;
-  display: flex;
-  align-items: flex-end; /* Align content to the bottom of the container */
-  justify-content: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-weight: bold;
+export const BannerGlobal = styled.div`
   position: relative;
-  color: ${cores.branca};
+  margin-bottom: 56px;
 
-  .overlay {
+  &::before {
     position: absolute;
-    top: 0;
-    left: 0;
+    content: '';
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 20px;
-    box-sizing: border-box;
-    color: ${cores.branca};
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
 `
 
-export const Title = styled.h3`
-  font-weight: bold;
+export const BannerBg = styled.div`
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 280px;
+  width: 100%;
   font-size: 32px;
-  margin-top: 180px;
-
-  @media (max-width: ${breakpoints.phone}) {
-    font-size: 24px;
-  }
+  color: ${colors.white};
 `
-export const Category = styled.h3`
+
+export const BannerContainer = styled.div`
+  position: relative;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  z-index: 2;
+`
+
+export const BannerTitle = styled.h2`
+  font-weight: 900;
+  padding-bottom: 32px;
+`
+
+export const BannerSubTitle = styled.h3`
   font-weight: 100;
-  font-size: 32px;
+  padding-top: 24px;
+  text-transform: capitalize;
 `

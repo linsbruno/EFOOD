@@ -1,51 +1,15 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { colors } from '../../styles'
 
-export const HeaderContainer = styled.header`
-  justify-content: center;
-
-  @media (max-width: ${breakpoints.tablet}) {
-    display: none;
-  }
-`
-export const Image = styled.div`
-  width: 100%;
-  display: block;
-  background-repeat: no-repeat;
-  background-size: cover;
+export const SubTitulo = styled.h2`
   font-weight: bold;
-
-  a {
-    color: ${cores.laranja};
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-  }
-`
-
-export const Links = styled.ul`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 40px 120px;
-  margin: 0;
-`
-
-export const LinkItem = styled.li`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-`
-
-export const Description = styled.p`
-  margin-top: 64px;
-  text-align: center;
   font-size: 36px;
-  font-weight: bold;
+  line-height: 42px;
+  color: ${colors.salmon};
+  width: 539px;
+  margin: 0 auto;
+`
 
-  @media (max-width: ${breakpoints.tablet}) {
-    display: none;
-  }
+export const Logo = styled.img`
+  margin-bottom: 138px;
 `
